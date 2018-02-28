@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Da Wey</title>
+  <meta name="description" content="This site is designed to show selected places on the map">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+  <div id="container">
+    <header>
+      <h1 class="header">Find your location</h1>
+      <h2 class="subheader">and show it on the map..</h2>
+    </header>
+
+
+    <main>
+      <div class="content-wrap clearfix">
+      <section class="map-pick">
+        <button id="btn">Show</button>
+        <p class="info"></p>
+      </section>
+      <section class="map-canvas">
+        <div id="map"></div>
+      </section>
+    </div>
+    </main>
+    <script src="js/modernizr-custom.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>')
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
