@@ -101,11 +101,13 @@ html {
   display: flex;
   flex-flow: row wrap;
   font-size: 1.6rem;
-  height: 100%;
+  height: 100vh;
 }
 
-.wrapper>* {
+.wrapper > * {
   flex: 1 100%;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 /* Header */
@@ -122,6 +124,7 @@ html {
   font-size: 3rem;
   color: #F0F9ED; /*jasny kremowy*/
   line-height: 1.4em;
+  flex: 1 100%;
 }
 
 .header-text--small {
@@ -129,22 +132,59 @@ html {
 }
 
 .pick-map {
-  padding: 1rem 2rem;
+  padding: 1em 2rem;
   background-color: #F0F9ED;
+  align-items: center;
 }
 
 .map-canvas {
-padding: 1rem 1rem;
-background-color: #E53947;s
+padding: 1em 1rem;
+background-color: #E53947;
+justify-content: center;
 }
 
 .map {
+  flex: 1 100%;
   padding-top:100%;
+  max-width: 480px;
 }
 
 .pick-map p {
   margin: 0;
 }
+
+.pick-color {
+  padding: 1em 2rem;
+  background-color: #F0F9ED; /*jasny kremowy*/
+  align-items: center;
+}
+
+.footer {
+  padding: 1em 2rem;
+  justify-content: center;
+  background-color:  #1C3456; /*ciemny niebieski*/
+  color: #F0F9ED; /*jasny kremowy*/
+}
+
+.footer p {
+  margin: auto;
+}
+
+@media screen and (min-width: 30em) { /*30em = 30x16px =480px*/
+  .header, .pick-map, .pick-color {
+    order: -1;
+  }
+  .pick-map, .pick-color {
+    flex: 1 auto;
+  }
+  .map {
+    padding-top: 480px;
+  }
+}
+
+@media screen
+
+
 
 /* ==========================================================================
    Helper classes
