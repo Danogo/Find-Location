@@ -93,69 +93,57 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-html, body {
+html {
+  font-size: 62.5%;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 1.6rem;
   height: 100%;
+}
+
+.wrapper>* {
+  flex: 1 100%;
+}
+
+/* Header */
+
+.header {
+  padding: 1.5em 2rem;
+  background-color: #1C3456; /*ciemny niebieski*/
+  text-align:center;
+}
+
+.header-text {
   margin: 0;
-  padding: 0;
-  font-family: 'Open Sans', arial, helvetica, sans-serif;
+  font-family: 'Inconsolata', arial, helvetica, sans-serif;
+  font-size: 3rem;
+  color: #F0F9ED; /*jasny kremowy*/
+  line-height: 1.4em;
+}
+
+.header-text--small {
+  font-size: 1.8rem;
+}
+
+.pick-map {
+  padding: 1rem 2rem;
   background-color: #F0F9ED;
 }
 
-header {
-  border-bottom: 3px solid #A6D9DB;
-}
-
-#container {
-  width: 80%;
-  margin: 0 auto;
-  height: 100%;
-  background-color: #A6D9DB;
-}
-
-.header, .subheader {
-  padding: 0.5em 0 0 2.5rem;
-  text-align: left;
-  margin: 0;
-  font-family: 'Inconsolata', arial, helvetica, sans-serif;
-  font-size: 3em;
-  letter-spacing: 1.4px;
-  background-color: #1C3456; /*ciemny niebieski*/
-  color: #F0F9ED; /*jasny kremowy*/
-}
-
-.subheader {
-  padding-top: 0;
-  padding-bottom: 0.75em;
-  font-size: 2em;
-}
-
-.content-wrap {
-  background: linear-gradient(180deg, #1C3456, #A6D9DB); /*ciemny niebieski do jasny niebieski*/
-}
-}
-
-#btn {
-  color: teal;
-}
-
-.map-pick {
-  float: left;
-  width: 30%;
-  min-height: 200px;
-  margin: 3rem 3rem 0;
-}
-
 .map-canvas {
-  float: right;
-  width: 50%;
-  height: 38em;
-  margin: 3rem 3rem 0;
-  overflow: hidden;
+padding: 1rem 1rem;
+background-color: #E53947;s
 }
 
-#map {
-  width: 100%;
-  height: 100%;
+.map {
+  padding-top:100%;
+}
+
+.pick-map p {
+  margin: 0;
 }
 
 /* ==========================================================================

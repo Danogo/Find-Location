@@ -1,6 +1,6 @@
 window.onload = loadScript;                                 //pobierz api google maps po wczytaniu zawartosci strony
 
-var mapBtn = document.getElementById('btn');
+var mapBtn = document.querySelector('.btn');
 mapBtn.addEventListener('click', function() {
   if (Modernizr.geolocation) {                               //jeżeli istenieje obsługa obiektu geolokalizacji
     navigator.geolocation.getCurrentPosition(success, fail); //to zapytaj o dane lokalizacyjne
@@ -35,7 +35,7 @@ function initMap(lat, long) {
     };
   }
 
-  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  var map = new google.maps.Map(document.querySelector('.map'), mapOptions);
 
 }
 

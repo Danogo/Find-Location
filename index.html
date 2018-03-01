@@ -16,30 +16,37 @@
   <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
-  <div id="container">
-    <header>
-      <h1 class="header">Find your location</h1>
-      <h2 class="subheader">and show it on the map..</h2>
+  <div class="wrapper">
+    <!-- header -->
+    <header class="header">
+      <h1 class="header-text">Find your location</h1>
+      <h2 class="header-text header-text--small">and show it on the map..</h2>
     </header>
-
-
-    <main>
-      <div class="content-wrap clearfix">
-      <section class="map-pick">
-        <button id="btn">Show</button>
-        <p class="info"></p>
-      </section>
-      <section class="map-canvas">
-        <div id="map"></div>
-      </section>
-    </div>
-    </main>
-    <script src="js/modernizr-custom.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-      window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>')
-    </script>
-    <script src="js/main.js"></script>
+    <!-- content -->
+    <aside class="pick-map">
+      <button class="btn">Show</button>
+      <p class="info"></p>
+    </aside>
+    <article class="map-canvas">
+      <div class="map"></div>
+      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod erat enim. Morbi luctus pulvinar volutpat. Fusce at nulla elementum arcu accumsan ultricies.</p> -->
+    </article>
+    <aside class="pick-color">
+      <label for="color">Choose color</label>
+      <input type="radio" name="color" value="Color" id="color">
+    </aside>
+    <!-- footer -->
+    <footer>
+      <p>Daniel Ogonowski &copy; 2018</p>
+    </footer>
+  </div> <!-- wrapper -->
+  <!-- Scripts -->
+  <script src="js/modernizr-custom.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>')
+  </script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
