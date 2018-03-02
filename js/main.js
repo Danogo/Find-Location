@@ -3,12 +3,12 @@ window.onload = loadScript; //pobierz api google maps po wczytaniu zawartosci st
 var errInfo = document.querySelector('.info');
 var mapBtn = document.querySelector('.pick-map ');
 var target;
-mapBtn.addEventListener('click', function(event) {
-  target = event.target;
-  if (target.nodeName && target.nodeName.toLowerCase() !== 'button') {
-    return false;
-  } //gdy wystąpiło zdarzenie click na przycisku
-  if (Modernizr.geolocation) { //jeżeli istenieje obsługa obiektu geolokalizacji
+mapBtn.addEventListener('click', function(event) { //gdy wystąpiło zdarzenie click na przycisku
+  target = event.target;                            //to pobierz element docelowy dla zdarzenia
+  if (target.nodeName && target.nodeName.toLowerCase() !== 'button') { //jeżeli nie kliknięto przycisku
+    return;                                               //to wyjdź z funkcji i zwróć undefined
+  }
+  if (Modernizr.geolocation) { //jeżeli istnieje obsługa obiektu geolokalizacji
     navigator.geolocation.getCurrentPosition(success, fail); //to zapytaj o dane lokalizacyjne
   } else { //jeżeli nie to
     errInfo.textContent = 'Niestety, przeglądarka nie obsługuje funkcji geolokalizacji'; //wyświetl informacje o braku obsługi
@@ -25,16 +25,16 @@ function success(position) { //wykryto obsługę geolokalizacji
       zoom = 18;
       break;
     case 'btn btn-city':
-      zoom = 9;
+      zoom = 10;
       break;
     case 'btn btn-country':
       zoom = 5;
       break;
     default:
-      return false;
+      return;
       break;
   }
-  mapCanv.className = mapCanv.className.replace(' visuallyhidden', '');
+
   errInfo.textContent = '';
   initMap(lat, long, zoom);
 }
@@ -47,24 +47,14 @@ function fail(err) { // Nie wykryto obsługi geolokalizacji
 
 /*---- Stworzenie obiektu mapy o określonych parametrach------*/
 function initMap(lat, long, zoom) {
-  var mapOptions;
-  if (lat && long) {
-    mapOptions = {
+  var mapOptions = {
       center: {
         lat: lat,
         lng: long
       },
       zoom: zoom
     };
-  } else {
-    mapOptions = {
-      center: {
-        lat: 48.858093,
-        lng: 2.294694
-      },
-      zoom: 8
-    };
-  }
+
   var map = new google.maps.Map(document.querySelector('.map'), mapOptions); //stworzenie obiektu mapy
 }
 
