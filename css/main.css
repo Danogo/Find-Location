@@ -97,10 +97,16 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  background-color: #f7f7f7; /*jasny szary*/
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+}
+
 .wrapper {
   display: flex;
   flex-flow: row wrap;
   font-size: 1.6rem;
+  background-color: #FFFFFF;
   height: 100vh;
 }
 
@@ -114,15 +120,16 @@ html {
 
 .header {
   padding: 1.5em 2rem;
-  background-color: #1C3456; /*ciemny niebieski*/
+  background-color: #1A5276; /* ciemny niebieski*/
   text-align:center;
+  align-items: center;
 }
 
 .header-text {
   margin: 0;
   font-family: 'Inconsolata', arial, helvetica, sans-serif;
   font-size: 3rem;
-  color: #F0F9ED; /*jasny kremowy*/
+  color: #FFFFFF;
   line-height: 1.4em;
   flex: 1 100%;
 }
@@ -131,59 +138,92 @@ html {
   font-size: 1.8rem;
 }
 
+/* Pick map precision*/
+
 .pick-map {
-  padding: 1em 2rem;
-  background-color: #F0F9ED;
-  align-items: center;
+  padding: 1em 1rem;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
 }
+
+.info {
+  margin: 1em 0 0 0;
+  color: #E74C3C;
+}
+
+.btn {
+  color: #FFFFFF;
+  background-color: #1A5276;
+  border: none;
+  padding: 0.5em 1rem;
+  margin-bottom: 0.5em;
+  max-height: 3.5rem;
+}
+.btn-country {
+  margin-bottom: 0;
+}
+
+.btn:hover {
+  background-color: #1F618D;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline:none;
+}
+
+/* Map canvas */
 
 .map-canvas {
 padding: 1em 1rem;
-background-color: #E53947;
+background-color: #EAF2F8;
 justify-content: center;
 }
 
 .map {
   flex: 1 100%;
   padding-top:100%;
-  max-width: 480px;
 }
 
-.pick-map p {
-  margin: 0;
-}
-
+/* Pick map color*/
 .pick-color {
   padding: 1em 2rem;
-  background-color: #F0F9ED; /*jasny kremowy*/
+  background-color: #EAF2F8;
   align-items: center;
 }
 
 .footer {
   padding: 1em 2rem;
   justify-content: center;
-  background-color:  #1C3456; /*ciemny niebieski*/
-  color: #F0F9ED; /*jasny kremowy*/
+  background-color: #1A5276; /*ciemny niebieski*/
+  color: #FFFFFF;
 }
 
 .footer p {
   margin: auto;
 }
 
-@media screen and (min-width: 30em) { /*30em = 30x16px =480px*/
-  .header, .pick-map, .pick-color {
-    order: -1;
+@media only screen and (min-width: 20em) {
+  .pick-map {
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
   }
-  .pick-map, .pick-color {
-    flex: 1 auto;
-  }
-  .map {
-    padding-top: 480px;
+
+  .btn {
+    margin:0;
   }
 }
 
-@media screen
+@media only screen and (min-width: 30em) { /*30em = 30x16px =480px*/
 
+}
+
+@media only screen and (min-width: 56.25em) {
+
+}
 
 
 /* ==========================================================================
