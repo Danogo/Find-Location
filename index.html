@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Da Wey</title>
+  <title>Find yourself</title>
   <meta name="description" content="This site is designed to show selected places on the map">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -20,19 +20,20 @@
     <!-- header -->
     <header class="header">
       <h1 class="header-text">Find your location</h1>
-      <h2 class="header-text header-text--small">and show it on the map..</h2>
+      <h2 class="header-text header-text--small">and show it on the map</h2>
     </header>
     <!-- content -->
     <aside class="pick-map">
       <button class="btn btn-street">Your street</button>
       <button class="btn btn-city">Your city</button>
       <button class="btn btn-country">Your country</button>
-      <p class="info hidden"></p>
     </aside>
+    <p class="err-info hidden"></p>
     <article class="map-canvas">
       <div class="map"></div>
+      <p class="click-info">Click one of the buttons above to see your location..</p>
     </article>
-    <aside class="pick-color">
+    <aside class="pick-color hidden">
       <input type="radio" class="radio-color" name="color">
       <input type="radio" class="radio-color" name="color">
       <input type="radio" class="radio-color" name="color">

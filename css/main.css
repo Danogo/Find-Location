@@ -137,6 +137,7 @@ body {
 
 .header-text--small {
   font-size: 1.8rem;
+  letter-spacing: 0.8px;
 }
 
 /* Pick map precision*/
@@ -144,14 +145,18 @@ body {
 .pick-map {
   padding: 1em 1rem;
   background-color: #FFFFFF;
-  display: flex;
+  max-width: 480px;
+  margin: 0 auto;
   flex-flow: column nowrap;
   justify-content: space-between;
 }
 
-.info {
-  margin: 1em 0 0 0;
+.err-info {
+  margin: 0;
   color: #E74C3C;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 0.5em;
 }
 
 .btn {
@@ -177,9 +182,12 @@ body {
 /* Map canvas */
 
 .map-canvas {
-padding: 1em 1rem;
+padding: 0;
 background-color: #EAF2F8;
 justify-content: center;
+align-items: stretch;
+text-align: center;
+position: relative;
 }
 
 .map {
@@ -187,9 +195,16 @@ justify-content: center;
   padding-top:100%;
 }
 
+.click-info {
+  position:absolute;
+  font-size: 1em;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
 /* Pick map color */
 .pick-color {
-  padding: 0 2rem 1em 2rem;
+  padding: 1em 2rem 1em 2rem;
   background-color: #EAF2F8;
   align-items: center;
   justify-content: flex-end;
@@ -216,7 +231,6 @@ margin-left: 0.5em;
 @media only screen and (min-width: 20em) { /* >=320px */
   .pick-map {
     flex-flow: row nowrap;
-    justify-content: space-evenly;
     align-items: center;
   }
 
@@ -231,6 +245,19 @@ margin-left: 0.5em;
   height: 480px;
   padding-top: 0;
   }
+
+  .click-info {
+    font-size: 1.2em;
+  }
+
+  .map-canvas {
+    padding: 1em 1rem;
+    align-items: center;
+  }
+
+  .pick-color {
+    padding-top: 0;
+  }
 }
 
 
@@ -239,9 +266,17 @@ margin-left: 0.5em;
     margin: 0 auto;
   }
 
+  .pick-map {
+  max-width: 600px;
+  }
+
   .map {
     flex: 0 600px;
     height: 600px;
+  }
+
+  .click-info {
+    font-size: 1.4em;
   }
 }
 
