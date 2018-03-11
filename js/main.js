@@ -76,3 +76,8 @@ function loadScript() { //dodanie api map google do strony
   script.setAttribute('async', '');
   document.body.appendChild(script);
 }
+
+
+//FIXME: Zastosować geolokalizację z google api albo wykupić certyfikat ssl na https
+//TODO: Dodać opcję zmiany koloru mapy
+//TODO: Ustawić znacznik na mapie w miejscu wskazanym przez geolokalizację
